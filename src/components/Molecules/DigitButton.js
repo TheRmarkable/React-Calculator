@@ -1,11 +1,12 @@
-import { ACTIONS } from "./App"
+import { ACTIONS } from "../../constants/Actions"
+import AtomButton from "../Atoms/AtomButton"
 
 export default function DigitButton({ dispatch, digit }) {
   return (
-    <button
+    <AtomButton
       onClick={() => dispatch({ type: ACTIONS.ADD_DIGIT, payload: { digit } })}
+      text = {digit}
     >
-      {digit}
-    </button>
+    </AtomButton>
   )
 }
